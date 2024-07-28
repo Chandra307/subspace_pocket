@@ -13,7 +13,7 @@ document.getElementById('create-account-form').addEventListener('submit', async 
     const accountType = document.getElementById('accountType').value;
 
     try {
-        await axios.post('http://localhost:3000/user/account', { accountType }, { headers: { "Authorization": token } });
+        await axios.post('/user/account', { accountType }, { headers: { "Authorization": token } });
 
         alert('Account created successfully!');
     }

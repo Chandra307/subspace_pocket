@@ -7,7 +7,7 @@ document.getElementById('signup-form').addEventListener('submit', async function
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         
-        const response = await axios.post('http://localhost:3000/user/signup', { username, email, password });
+        const response = await axios.post('/user/signup', { username, email, password });
         console.log(response);
         
         if (response.status === 201) {

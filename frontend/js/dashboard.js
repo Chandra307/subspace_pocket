@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             alert('Login again');
             window.location.href = './login.html';
         }
-        const { data } = await axios.get('http://localhost:3000/user/account', { headers: { "Authorization": token } });
+        const { data } = await axios.get('/user/account', { headers: { "Authorization": token } });
         const accounts = data.accounts;
         
         const accountSelect = document.getElementById('account');
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                     else {
 
                         const { data } = await axios.put(
-                            `http://localhost:3000/user/account/${accountNumber}`,
+                            `/user/account/${accountNumber}`,
                             { amount, transaction },
                             { headers: { "Authorization": token }
                         });
