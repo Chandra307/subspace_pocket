@@ -12,8 +12,8 @@ app.use('/user', userRouter);
 
 app.use((req, res, next) => {
     let fileName;
-    
-    if (req.url === '/' || req.url === '/login.html') fileName = '/login.html'
+
+    if (req.url === '/' || req.url === '/login.html') fileName = '/login.html';
     else fileName = req.url;
     
     let filePath =  path.join(__dirname, '../', '/frontend', fileName);
